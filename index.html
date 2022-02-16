@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taslak</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: auto;
+            margin-top: 120px;
+            width: 600px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            visibility: hidden;
+
+        }
+
+        .item {
+
+            width: 100%;
+            height: 12%;
+            border: 1px solid black;
+            font-size: 22px;
+            font-weight: 600;
+            visibility: hidden;
+            color: red;
+        }
+
+        #buttonLucky {
+
+            width: 120px;
+            height: 40px;
+            border-radius: 8px;
+            
+
+        }
+
+        #buttonLucky:hover {
+            cursor: pointer;
+        }
+
+        #numbers {
+            width: 120px;
+            height: 40px;
+            border-radius: 8px;
+           
+          
+            
+        }
+
+        .buttons{
+            margin: auto;
+            margin-top: 80px;
+            width: 600px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+        <div class="item item-5"></div>
+        <div class="item item-6"></div>
+        <div class="item item-7"></div>
+        <div class="item item-8"></div>
+    </div>
+
+    <div class="buttons">
+        <input type="number" id="numbers" min="1" max="8" autofocus value="1">
+        <button id="buttonLucky">Lucky Numbers</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
