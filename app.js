@@ -19,6 +19,7 @@ luckyButton.addEventListener("click", () => {
     for (let i=0; i < resultTable.children.length; i++){
 
         resultTable.children[i].innerText = "";
+        resultTable.children[i].style.visibility = "hidden";
     }
 
     numberValue = numberArea.value;
@@ -70,23 +71,26 @@ luckyButton.addEventListener("click", () => {
 
         numbers.forEach(function (item) {
 
-            if ((item == numbers[5]) || (item == numbers[6])) {
+            if ((item == numbers[6]) || (item == numbers[7])) {
 
-                resultTable.children[i].style.visibility = "visible";
-                resultTable.children[i].innerText += item + "|  ";
+                
+                resultTable.children[i].innerText += " |  " + item;
                 } 
                 
-                else if (item == numbers[7]) {
+                else if (item == numbers[0]) {
 
-                    resultTable.children[i].style.visibility = "visible";
+                    
                     resultTable.children[i].innerText += item;
             
             } else {
 
-                resultTable.children[i].style.visibility = "visible";
-                resultTable.children[i].innerText += item + ",  ";
+                
+                resultTable.children[i].innerText +=  ",  " + item;
 
             }
+
+            resultTable.children[i].style.visibility = "visible";
+        
         });
 
         numbers = [];
