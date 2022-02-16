@@ -16,6 +16,11 @@ numberArea.addEventListener("change", function () {
 
 luckyButton.addEventListener("click", () => {
 
+    for (let i=0; i < resultTable.children.length; i++){
+
+        resultTable.children[i].innerText = "";
+    }
+
     numberValue = numberArea.value;
     
 
