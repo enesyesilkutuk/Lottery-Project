@@ -20,10 +20,10 @@ luckyButton.addEventListener("click", () => {
 
         resultTable.children[i].innerText = "";
         resultTable.children[i].style.visibility = "hidden";
+
     }
 
     numberValue = numberArea.value;
-
 
     for (let i = 0; i < numberValue; i++) {
 
@@ -58,7 +58,6 @@ luckyButton.addEventListener("click", () => {
                 numbers.pop();
                 numbers.push(Math.floor(Math.random() * 90 + 1));
             }
-
         }
 
         let joker = numbers.pop();
@@ -69,12 +68,12 @@ luckyButton.addEventListener("click", () => {
         numbers.push(joker);
         numbers.push(Math.floor(Math.random() * 90 + 1));
 
-        numbers.forEach(function (item) {
+        numbers.forEach(function (item, index) {
 
-            if ((item == numbers[6]) || (item == numbers[7])) {
-
+            if ((index == 6) || (index == 7)) {
 
                 resultTable.children[i].innerText += " |  " + item;
+
             } else if (item == numbers[0]) {
 
 
@@ -92,6 +91,7 @@ luckyButton.addEventListener("click", () => {
         });
 
         numbers = [];
+
     }
 
     numberArea.focus();
@@ -103,4 +103,5 @@ numberArea.addEventListener("keypress", (e) => {
     if (e.key == "Enter") {
         luckyButton.click();
     }
+
 });
