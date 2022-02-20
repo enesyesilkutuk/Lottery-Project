@@ -1,7 +1,6 @@
 let luckyButton = document.querySelector("#buttonLucky");
 let numberArea = document.getElementById("numbers");
 let resultTable = document.querySelector(".container");
-let numberValue;
 let numbers = [];
 
 numberArea.addEventListener("change", function () {
@@ -23,9 +22,7 @@ luckyButton.addEventListener("click", () => {
 
     }
 
-    numberValue = numberArea.value;
-
-    for (let i = 0; i < numberValue; i++) {
+    for (let i = 0; i < numberArea.value; i++) {
 
         for (let j = 1; j <= 7; j++) {
 
