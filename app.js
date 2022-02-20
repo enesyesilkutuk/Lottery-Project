@@ -16,14 +16,14 @@ numberArea.addEventListener("change", function () {
 
 luckyButton.addEventListener("click", () => {
 
-    for (let i=0; i < resultTable.children.length; i++){
+    for (let i = 0; i < resultTable.children.length; i++) {
 
         resultTable.children[i].innerText = "";
         resultTable.children[i].style.visibility = "hidden";
     }
 
     numberValue = numberArea.value;
-    
+
 
     for (let i = 0; i < numberValue; i++) {
 
@@ -73,26 +73,34 @@ luckyButton.addEventListener("click", () => {
 
             if ((item == numbers[6]) || (item == numbers[7])) {
 
-                
-                resultTable.children[i].innerText += " |  " + item;
-                } 
-                
-                else if (item == numbers[0]) {
 
-                    
-                    resultTable.children[i].innerText += item;
-            
+                resultTable.children[i].innerText += " |  " + item;
+            } else if (item == numbers[0]) {
+
+
+                resultTable.children[i].innerText += item;
+
             } else {
 
-                
-                resultTable.children[i].innerText +=  ",  " + item;
+
+                resultTable.children[i].innerText += ",  " + item;
 
             }
 
             resultTable.children[i].style.visibility = "visible";
-        
+
         });
 
         numbers = [];
+    }
+
+    numberArea.focus();
+
+});
+
+numberArea.addEventListener("keypress", (e) => {
+
+    if (e.key == "Enter") {
+        luckyButton.click();
     }
 });
