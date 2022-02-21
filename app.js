@@ -5,8 +5,8 @@ let numbers = [];
 
 numberArea.addEventListener("change", function () {
 
-    numberValue = numberArea.value;
-    if ((numberValue > 8) || (numberValue <= 0)) {
+    if ((numberArea.value > 8) || (numberArea.value <= 0)) {
+
         alert("Please enter a number between 1-8 (both inclusive)");
         numberArea.value = 1;
         numberArea.focus();
@@ -73,11 +73,9 @@ luckyButton.addEventListener("click", () => {
 
             } else if (item == numbers[0]) {
 
-
                 resultTable.children[i].innerText += item;
 
             } else {
-
 
                 resultTable.children[i].innerText += ",  " + item;
 
